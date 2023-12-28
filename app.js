@@ -14,7 +14,7 @@ app.get('/', (_, res) => {
   res.send('webhook server')
 })
 
-app.post('/webhook/push', express.json(), (req, res) => {
+app.post('/push', express.json(), (req, res) => {
   res.sendStatus(200)
 
   if (!req.body?.repository.full_name || !req.body?.pusher) return
